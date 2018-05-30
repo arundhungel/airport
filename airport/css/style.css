@@ -1,0 +1,537 @@
+html {
+  height: 100%;
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+* {
+  border-radius: 0 !important;
+  font-family: "Merriweather Sans", sans-serif !important; }
+
+body {
+  color: #8c8c8c;
+  background: #f3f3f3;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 8rem !important; }
+
+.container {
+  position: relative; }
+
+img {
+  display: block;
+  max-width: 100%;
+  border: none; }
+
+input:focus {
+  outline: none; }
+
+a:hover, a:focus {
+  text-decoration: none; }
+
+h1 {
+  font-size: 2.667em;
+  line-height: normal; }
+
+h2 {
+  font-size: 24px;
+  line-height: 28px; }
+
+h3 {
+  font-size: 22px;
+  line-height: normal; }
+
+h4 {
+  font-size: 20px;
+  line-height: normal; }
+
+h5 {
+  font-size: 18px;
+  line-height: normal; }
+
+.btn {
+  background: #fe891d;
+  color: #fff;
+  font-style: normal !important;
+  font-size: .867em;
+  line-height: 2.308em;
+  padding: 0 1.538em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1; }
+  .btn:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: '';
+    background: #ff7c02;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s ease-in-out; }
+  .btn:hover {
+    color: #fff; }
+    .btn:hover:after {
+      opacity: 1;
+      width: 100%; }
+  .btn:focus {
+    color: #fff; }
+
+.btn-more {
+  line-height: 1.9em;
+  font-size: .68em;
+  padding: 0 0.8em; }
+
+.navbar {
+  background: #fff;
+  margin-bottom: 0 !important;
+  border: none !important;
+  box-shadow: 0 3px 5px 0.3px rgba(0, 0, 0, 0.11);
+  z-index: 1; }
+  .navbar .navbar-brand {
+    padding: 3px 5px;
+    height: auto; }
+    .navbar .navbar-brand img {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 85px;
+      margin-right: 10px; }
+    .navbar .navbar-brand p {
+      display: inline-block;
+      vertical-align: middle;
+      color: #1d4283;
+      font-size: 18px;
+      line-height: 20px;
+      font-family: "Merriweather Sans", sans-serif; }
+  .navbar .navbar-toggle {
+    margin-top: 20px; }
+    .navbar .navbar-toggle .icon-bar {
+      background: #000; }
+  .navbar .active {
+    background-color: #FF8310; }
+    .navbar .active a {
+      color: #fff !important; }
+  .navbar .nav {
+    float: right; }
+  .navbar .nav > li > a {
+    display: block;
+    font-size: 15.5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 0 .7em !important;
+    height: 70px;
+    line-height: 70px !important;
+    color: #333;
+    transition: all .3s ease 0s !important; }
+    .navbar .nav > li > a:hover, .navbar .nav > li > a:focus {
+      background: #FF8310 !important;
+      color: #f4f4f4; }
+  .navbar .nav > li .list-group-item {
+    padding: 0 !important;
+    border: none !important; }
+    .navbar .nav > li .list-group-item:hover {
+      background-color: #FF8310;
+      color: #fff; }
+  .navbar .nav > li .dropdown-menu a {
+    padding: .5em 1.5em; }
+  .navbar .nav > li .dropdown-menu > li > a:focus, .navbar .nav > li .dropdown-menu > li > a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #FF8310; }
+  .navbar .nav > li .caret {
+    transition: none !important; }
+@media only screen and (max-width: 770px) {
+  .navbar .nav {
+    float: none; }
+    .navbar .nav > li > a {
+      height: 50px;
+      line-height: 50px !important;
+      padding: 0 1em !important; } }
+.affix {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  transition: 0.5s; }
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+  background-color: #FF8310 !important;
+  border: none !important;
+  color: #fff; }
+
+.navbar-collapse {
+  padding: 0 !important; }
+
+.navbar-nav {
+  margin: 0 !important; }
+
+.flexslider {
+  padding: 0;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  height: 580px; }
+
+.flex-caption {
+  background: none;
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  right: 45px;
+  top: 45px;
+  bottom: auto;
+  width: 295px; }
+
+.flex-caption h3 {
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  text-transform: uppercase; }
+
+.flex-caption p {
+  margin: 0 0 15px; }
+
+.weather-show {
+  position: absolute;
+  right: 45px;
+  top: 20px;
+  width: 295px; }
+  .weather-show > div {
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff; }
+    .weather-show > div h3 {
+      color: #fff;
+      margin-bottom: 8px;
+      font-size: 24px; }
+    .weather-show > div p {
+      line-height: 20px;
+      font-size: 14px;
+      color: #f9f9f9; }
+
+.logo {
+  position: absolute;
+  left: 45px;
+  top: 20px;
+  width: 295px;
+  font-size: 70px;
+  padding: 0 0 20px 0;
+  color: #fff;
+  background: url(../img/logo.png) 30px 0px no-repeat;
+  opacity: 0.5;
+  display: none; }
+
+.flex-control-paging li a {
+  background: #fff; }
+  .flex-control-paging li a:hover {
+    background: #FF8310; }
+.flex-control-paging li a.flex-active {
+  background: #FF8310; }
+
+.flex-control-nav {
+  bottom: 20px; }
+
+.main-section {
+  background: #8addf0;
+  color: #fff;
+  position: relative;
+  padding: 40px 0; }
+  .main-section:after {
+    width: 50%;
+    display: block;
+    background: #fff;
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    bottom: 0; }
+  .main-section h1 {
+    font-size: 60px;
+    line-height: 70px; }
+  .main-section .left-content {
+    text-align: right;
+    padding: 0 30px 0 0; }
+  .main-section .right-content {
+    position: relative;
+    padding: 0 0 0 30px;
+    z-index: 1; }
+  .main-section p {
+    line-height: 30px;
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0 0 0; }
+
+.flight-info {
+  background: black url(../img/plane.jpg) center fixed;
+  background-size: 100%;
+  padding: 40px 0 50px 0;
+  color: #333;
+  font-size: 18px;
+  line-height: 22px; }
+  .flight-info .date-today {
+    float: right;
+    color: #fff;
+    margin-bottom: 20px; }
+  .flight-info .time-now {
+    float: left;
+    color: #fff;
+    margin-bottom: 20px; }
+  .flight-info .arrival {
+    padding-right: 30px; }
+  .flight-info .departure {
+    padding-left: 30px; }
+  .flight-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #FF8310; }
+    .flight-info h3 .btn-more {
+      float: right;
+      font-size: 12px; }
+
+#flight-info {
+  background: transparent; }
+  #flight-info .date-today {
+    color: #333; }
+  #flight-info .time-now {
+    color: #333; }
+
+table {
+  border-collapse: collapse;
+  width: 100%; }
+  table th, table td {
+    text-align: left;
+    padding: 10px !important;
+    font-size: 18px !important;
+    line-height: 22px; }
+  table tr {
+    background-color: #f9f9f9; }
+  table th {
+    background-color: #4CAF50;
+    color: white; }
+
+.contact table th, .contact table td {
+  padding: 10px !important;
+  font-size: 16px !important; }
+.contact table tr {
+  background: transparent; }
+
+.nb {
+  color: #FF8310;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 16px; }
+
+.news-section {
+  padding: 30px 0;
+  line-height: 20px;
+  position: relative;
+  background: #fff; }
+  .news-section:after {
+    width: 50%;
+    display: block;
+    background: #8addf0;
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    bottom: 0; }
+  .news-section .list-section {
+    padding-right: 30px; }
+  .news-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    color: #FF8310; }
+  .news-section .listing li {
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+    padding: 8px 0; }
+  .news-section .listing span {
+    font-size: 30px;
+    line-height: 40px;
+    color: #ccc;
+    position: absolute;
+    top: -5px;
+    left: 0; }
+  .news-section .listing p {
+    padding-left: 60px; }
+    .news-section .listing p a {
+      color: #222;
+      transition: .5s ease-in-out;
+      line-height: 22px; }
+      .news-section .listing p a:hover {
+        color: #FF8310; }
+    .news-section .listing p a.list-command {
+      font-size: 14px;
+      float: right;
+      margin: 10px 20px 0 0;
+      color: #FF8310; }
+      .news-section .listing p a.list-command:hover {
+        margin-right: 15px; }
+    .news-section .listing p:first-child {
+      padding-top: 0; }
+  .news-section .blue-section {
+    padding-left: 30px;
+    padding-right: 0;
+    z-index: 1; }
+    .news-section .blue-section h3 {
+      color: #fff; }
+    .news-section .blue-section .listing li {
+      border-bottom: 1px solid #66d6ef; }
+    .news-section .blue-section .listing span {
+      color: #eee; }
+    .news-section .blue-section .listing p a {
+      transition: .5s; }
+      .news-section .blue-section .listing p a:hover {
+        color: #f9f9f9; }
+    .news-section .blue-section .listing p a.list-command {
+      color: #fff; }
+  .news-section .btn-more {
+    float: right;
+    font-size: 10px;
+    margin: 10px 15px 0 0; }
+
+#news-section {
+  border: none; }
+  #news-section:after {
+    display: none; }
+  #news-section .list-section {
+    padding: 20px; }
+  #news-section .listing li {
+    padding: 15px 0; }
+    #news-section .listing li:last-child {
+      border: none; }
+  #news-section .listing span {
+    top: 5px; }
+  #news-section .blue-section {
+    background: #8addf0; }
+    #news-section .blue-section li {
+      padding: 10px 0; }
+      #news-section .blue-section li:last-child {
+        border-bottom: 1px solid #66d6ef; }
+    #news-section .blue-section .listing p a {
+      line-height: 20px; }
+
+.about {
+  padding: 30px 0; }
+  .about h2 {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 38px;
+    line-height: 42px;
+    color: #FF8310;
+    margin: 20px 0; }
+  .about p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 15px; }
+  .about h3 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    color: #FF8310;
+    font-weight: 600; }
+  .about .about-content {
+    line-height: 30px; }
+  .about .profile-content .row {
+    margin-top: 10px; }
+  .about ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 22px; }
+
+.sub-about h3 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 15px; }
+.sub-about ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 24px; }
+
+.director-img {
+  float: right; }
+  .director-img .caption b {
+    font-weight: 600;
+    color: #FF8310;
+    display: block; }
+
+.contact {
+  padding: 30px 0; }
+  .contact h3 {
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 38px;
+    line-height: 42px;
+    color: #FF8310;
+    margin: 20px 0; }
+  .contact h4 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    color: #FF8310;
+    font-weight: 600; }
+  .contact input.text, .contact textarea {
+    width: 90%;
+    padding: 20px 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 30px;
+    background: transparent; }
+  .contact p {
+    line-height: 20px;
+    margin-bottom: 10px; }
+
+.map {
+  -webkit-filter: grayscale(20%);
+  filter: grayscale(20%); }
+
+footer {
+  background: #333;
+  padding: 1em 0 !important;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  footer .social {
+    text-align: center;
+    margin-bottom: 15px; }
+    footer .social li {
+      display: inline-block;
+      margin-right: 5px; }
+      footer .social li a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50% !important; }
+      footer .social li i {
+        color: #fff;
+        font-size: 16px;
+        display: block;
+        line-height: 30px !important; }
+        footer .social li i:before {
+          font-family: Fontawesome !important; }
+      footer .social li .facebook {
+        background-color: #4966b6; }
+      footer .social li .twitter {
+        background: #4eccf0; }
+      footer .social li .instagram {
+        background: #e1306c; }
+      footer .social li .linkedin {
+        background: #007bb6; }
+      footer .social li .googleplus {
+        background: #d34836; }
+  footer p {
+    margin-bottom: 10px; }
+    footer p:last-child {
+      margin-bottom: 0; }
+
+/*# sourceMappingURL=style.css.map */
